@@ -1,24 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-
 Vue.use(Vuex)
-
-
 
 export default new Vuex.Store({
     state :{
-      citiesHistory: []
+      userHistory: []
     
   }, 
     
-  
     mutations : {
-      addCity (state , city) {
-        state.citiesHistory.push(city)
-        
+      addCity (state , user) {
+        state.userHistory.push(user)
       }
     }
   })
-  //console.log(store.state.citiesHistory)
-

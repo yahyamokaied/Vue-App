@@ -37,7 +37,6 @@
     methods: {
       
       fetchUser (){
-        this.$store.commit('addCity' , this.query)
           fetch(this.url)
             .then (response => {
               return response.json();
@@ -47,6 +46,7 @@
     setResults(results){
       var i = Math.floor(Math.random() * 9) + 1;
       this.user = results[i];
+      this.$store.commit('addUser' , this.user)
     }
   }
 }
