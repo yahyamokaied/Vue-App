@@ -10,8 +10,8 @@ export default new Vuex.Store({
   }, 
     
     mutations : {
-      addCity (state , user) {
-        state.userHistory.push(user)
+      addUser (state , huser) {
+        state.userHistory.push(huser)
       }
     }
   })

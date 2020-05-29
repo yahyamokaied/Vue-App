@@ -6,6 +6,8 @@
 
   
   <input type="button" class="button" v-model="button" v-on:click="fetchUser"/>
+  <div class="text">Users history : {{$store.state.userHistory}}</div>
+
   <div>
   <article>
   <div  class="text" >{{user.id}}</div>
@@ -30,7 +32,7 @@
         url : 'https://jsonplaceholder.typicode.com/users/',
         button : 'Fetch Random User',
         user:{},
-        query: ''
+        huser:''
       }
 
     },
@@ -46,8 +48,9 @@
     setResults(results){
       var i = Math.floor(Math.random() * 9) + 1;
       this.user = results[i];
-      this.$store.commit('addUser' , this.user)
-    }
+      this.huser = results[i].name;
+      this.$store.commit('addUser' , this.huser)
+      }
   }
 }
 </script>
